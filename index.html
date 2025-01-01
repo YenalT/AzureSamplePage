@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Front Door Test</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            background-color: #0078D4; /* Microsoft Azure Mavisi */
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            margin-top: 20px;
+        }
+        h1 {
+            color: #0078D4;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Azure Front Door Test</h1>
+        <p>Bu sayfa Azure Front Door servisi için bir test sayfasıdır.</p>
+        <p>Hostname: <span id="hostname"><%= Request.ServerVariables("SERVER_NAME") %></span></p>
+        <p>Region: <span id="region"><%= Request.ServerVariables("REGION_NAME") %></span></p>
+        <p>App Service Name: <span id="appServiceName"><%= Request.ServerVariables("WEBSITE_SITE_NAME") %></span></p>
+        <div class="logo">
+            <img src="AzureLogo.png" alt="Azure Logo">
+        </div>
+    </div>
+</body>
+</html>
